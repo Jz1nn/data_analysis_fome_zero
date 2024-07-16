@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import folium
+import inflection 
 
 from PIL import Image
 from streamlit_folium import folium_static
