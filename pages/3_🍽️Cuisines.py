@@ -237,7 +237,7 @@ with st.container():
         'aggregate_rating': 'Avaliação Media'
     })
 
-    st.write(df_aux)
+    st.dataframe(df_aux)
 
 with st.container():
     col1, col2 = st.columns(2)
