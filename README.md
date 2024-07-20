@@ -1,3 +1,5 @@
+O dashboard pode ser acessado através deste link: [Dashboard Fome Zero](https://johnwln-fome-zero.streamlit.app/)
+
 # 1. Problema de Negócio
 
 A Fome Zero é uma marketplace de restaurantes que facilita a conexão e negociação entre clientes e restaurantes. O CEO recém-contratado, precisa entender melhor o negócio para tomar decisões estratégicas. Ele contratou você como Cientista de Dados para realizar uma análise detalhada dos dados da empresa e criar dashboards que respondam às perguntas chave sobre o negócio.
