@@ -1,100 +1,106 @@
-O dashboard pode ser acessado através deste link: [Dashboard Fome Zero](https://johnwln-fome-zero.streamlit.app/)
+The dashboard can be accessed through this link: [Fome Zero Dashboard](https://johnwln-fome-zero.streamlit.app/)
 
-# 1. Problema de Negócio
+# 1. Business Problem
 
-A Fome Zero é uma marketplace de restaurantes que facilita a conexão e negociação entre clientes e restaurantes. O CEO recém-contratado, precisa entender melhor o negócio para tomar decisões estratégicas. Ele contratou você como Cientista de Dados para realizar uma análise detalhada dos dados da empresa e criar dashboards que respondam às perguntas chave sobre o negócio.
+Fome Zero is a restaurant marketplace that facilitates the connection and negotiation between customers and restaurants. The newly hired CEO needs to better understand the business to make strategic decisions. He hired you as a Data Scientist to perform a detailed analysis of the company's data and create dashboards that answer key questions about the business.
 
-# 2. Desafio
+# 2. Challenge
 
-O CEO precisa de respostas para as seguintes perguntas para entender melhor a Fome Zero:
+The CEO needs answers to the following questions to better understand Fome Zero:
 
-## Geral:
-1. Quantos restaurantes únicos estão registrados.
-2. Quantos países únicos estão registrados.
-3. Quantas cidades únicas estão registradas.
-4. Qual o total de avaliações feitas.
-5. Qual o total de tipos de culinária registrados.
+## General:
+1. How many unique restaurants are registered.
+2. How many unique countries are registered.
+3. How many unique cities are registered.
+4. What is the total number of reviews made.
+5. What is the total number of types of cuisine registered.
 
-## País:
-1. Qual o país com mais cidades registradas.
-2. Qual o país com mais restaurantes registrados.
-3. Qual o país com mais restaurantes de nível de preço 4.
-4. Qual o país com a maior quantidade de tipos de culinária distintos.
-5. Qual o país com a maior quantidade de avaliações feitas.
-6. Qual o país com a maior quantidade de restaurantes que fazem entrega.
-7. Qual o país com a maior quantidade de restaurantes que aceitam reservas.
-8. Qual o país com a maior média de avaliações registradas.
-9. Qual o país com a maior média de nota registrada.
-10. Qual o país com a menor média de nota registrada.
-11. Qual a média de preço de um prato para dois por país.
+## Country:
+1. Which country has the most cities registered.
+2. Which country has the most registered restaurants?
+3. Which country has the most restaurants at the same price level?
+4. Which country has the most different types of cuisine?
+5. Which country has the most reviews?
+6. Which country has the most restaurants that deliver?
+7. Which country has the most restaurants that accept reservations?
+8. Which country has the highest average number of registered reviews?
+9. Which country has the highest average rating?
+10. Which country has the lowest average rating?
+11. What is the average price of a dish for two by country?
 
-## Cidade:
-1. Qual a cidade com mais restaurantes registrados.
-2. Qual a cidade com mais restaurantes com nota média acima de 4.
-3. Qual a cidade com mais restaurantes com nota média abaixo de 2.5.
-4. Qual a cidade com o maior valor médio de um prato para dois.
-5. Qual a cidade com a maior quantidade de tipos de culinária distintas.
-6. Qual a cidade com a maior quantidade de restaurantes que fazem reservas.
-7. Qual a cidade com a maior quantidade de restaurantes que fazem entregas.
-8. Qual a cidade com a maior quantidade de restaurantes que aceitam pedidos online.
+## City:
+1. Which city has the most registered restaurants?
+2. Which city has the most restaurants with an average rating above 4?
+3. Which city has the most restaurants with an average rating below 2.5?
+4. Which city has the highest average price for a meal for two?
+5. Which city has the highest number of different types of cuisine?
+6. Which city has the highest number of restaurants that accept reservations?
+7. Which city has the highest number of restaurants that deliver?
+8. Which city has the highest number of restaurants that accept online orders?
+## Restaurants:
+1. Which restaurant has the highest number of reviews?
+2. Which restaurant has the highest average rating?
+3. Which restaurant has the highest price for a meal for two?
+4. Which Brazilian cuisine restaurant has the lowest average rating?
+5. Which Brazilian cuisine restaurant in Brazil has the highest average rating? 6. Restaurants that accept online orders have the highest average ratings.
+7. Restaurants that take reservations have the highest average price for a meal for two.
+8. Japanese restaurants in the US have a higher average price than American steakhouses.
 
-## Restaurantes:
-1. Qual o restaurante com a maior quantidade de avaliações.
-2. Qual o restaurante com a maior nota média.
-3. Qual o restaurante com o maior valor de um prato para duas pessoas.
-4. Qual o restaurante de culinária brasileira com a menor média de avaliação.
-5. Qual o restaurante de culinária brasileira no Brasil com a maior média de avaliação.
-6. Restaurantes que aceitam pedidos online têm mais avaliações.
-7. Restaurantes que fazem reservas têm o maior valor médio de um prato para duas pessoas.
-8. Restaurantes de culinária japonesa nos EUA têm um valor médio maior que churrascarias americanas.
+## Types of Cuisine:
+1. Italian restaurant with the highest average rating.
+2. Italian restaurant with the lowest average rating.
+3. American restaurant with the highest average rating.
+4. American restaurant with the lowest average rating.
+5. Arabic restaurant with the highest average rating.
+6. Arabic restaurant with the lowest average rating.
+7. Japanese restaurant with the highest average rating.
+8. Japanese restaurant with the lowest average rating.
+9. Homestyle restaurant with the highest average rating.
+10. Homestyle restaurant with the lowest average rating.
+11. Type of cuisine with the highest average price for a meal for two.
+12. Type of cuisine with the highest average score.
+13. Type of cuisine with the most restaurants that accept online orders and deliver.
 
-## Tipos de Culinária:
-1. Restaurante de culinária italiana com a maior média de avaliação.
-2. Restaurante de culinária italiana com a menor média de avaliação.
-3. Restaurante de culinária americana com a maior média de avaliação.
-4. Restaurante de culinária americana com a menor média de avaliação.
-5. Restaurante de culinária árabe com a maior média de avaliação.
-6. Restaurante de culinária árabe com a menor média de avaliação.
-7. Restaurante de culinária japonesa com a maior média de avaliação.
-8. Restaurante de culinária japonesa com a menor média de avaliação.
-9. Restaurante de culinária caseira com a maior média de avaliação.
-10. Restaurante de culinária caseira com a menor média de avaliação.
-11. Tipo de culinária com o maior valor médio de um prato para duas pessoas.
-12. Tipo de culinária com a maior nota média.
-13. Tipo de culinária com mais restaurantes que aceitam pedidos online e fazem entregas.
+# 3. Assumptions assumed for the analysis
 
-# 3. Premissas assumidas para a análise
+1. The data was collected from the Kaggle platform.
 
-1. Os dados foram coletados da plataforma Kaggle.
-2. Os 3 principais visões do negócio foram: Visão por País, visão por cidade e visão por cozinhas.
-3. Marketplace foi o modelo de negócio assumido.
+2. The 3 main business views were: Country View, City View and Kitchen View.
 
-# 4. Estratégia da Solução
+3. Marketplace was the assumed business model.
 
-Para resolver o desafio, será seguido o seguinte roteiro:
-1. **Coleta de Dados:** Utilizar o dataset disponível no Kaggle.
-2. **Entendimento dos Dados:** Analisar as colunas e remover dados irrelevantes.
-3. **Limpeza dos Dados:** Remover duplicatas, verificar e tratar dados faltantes.
-4. **Exploração e Análise dos Dados:** Responder às perguntas com base nos dados analisados.
-5. **Criação do Dashboard:** Utilizar Streamlit para apresentar os insights de forma visual e acessível.
+# 4. Solution Strategy
 
-# 5. Ferramentas Utilizadas
+To solve the challenge, the following roadmap will be followed:
 
-- **Python:** Para análise e manipulação dos dados.
-- **Jupyter Lab:** Para prototipar e desenvolver as soluções.
-- **Streamlit:** Para criar e hospedar o dashboard interativo.
+1. **Data Collection:** Use the dataset available on Kaggle.
 
-# 6. Conclusão
+2. **Data Understanding:** Analyze the columns and remove irrelevant data.
 
-- Dashboards interativos que permitam ao CEO visualizar as principais métricas e insights sobre os restaurantes cadastrados na plataforma Fome Zero.
-- Respostas detalhadas para todas as perguntas formuladas pelo CEO, baseadas em dados concretos e visualizações claras.
+3. **Data Cleaning:** Remove duplicates, check and treat missing data.
 
-# 7. Próximos Passos
+4. **Data Exploration and Analysis:** Answer the questions based on the analyzed data.
 
-1. Refinar e reduzir o número de métricas apresentadas.
-2. Adicionar novos filtros e funcionalidades ao dashboard.
-3. Incorporar novas visões de negócio conforme necessário.
+5. **Dashboard Creation:** Use Streamlit to present the insights in a visual and accessible way.
 
-# 8. Link do Dashboard
+# 5. Tools Used
 
-O dashboard pode ser acessado através deste link: [Dashboard Fome Zero](https://johnwln-fome-zero.streamlit.app/)
+- **Python:** For data analysis and manipulation.
+
+- **Jupyter Lab:** To prototype and develop the solutions.
+- **Streamlit:** To create and host the interactive dashboard.
+
+# 6. Conclusion
+
+- Interactive dashboards that allow the CEO to view the main metrics and insights about the restaurants registered on the Fome Zero platform.
+- Detailed answers to all questions asked by the CEO, based on concrete data and clear visualizations.
+
+# 7. Next Steps
+
+1. Refine and reduce the number of metrics presented.
+2. Add new filters and features to the dashboard.
+3. Incorporate new business views as needed.
+
+# 8. Dashboard Link
+
+The dashboard can be accessed through this link: [Fome Zero Dashboard](https://johnwln-fome-zero.streamlit.app/)
